@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33942436904401334}
   - component: {fileID: 23746444184752200}
   - component: {fileID: 65095561690161168}
-  - component: {fileID: 114437628225601342}
   m_Layer: 0
   m_Name: main
   m_TagString: Untagged
@@ -58,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ae86f8ce055add2479bdd8ef7a70ced6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,14 +96,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114437628225601342
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1292581930082350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35cc310e03d06b0458861c2df1c3e9fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
