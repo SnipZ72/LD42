@@ -10,6 +10,7 @@ public class CreateMap : MonoBehaviour {
 	
 	void Start () 
 	{
+		/*
 		string text = System.IO.File.ReadAllText("Assets/Level" + levelInt + ".txt");
 
 		char c;
@@ -23,10 +24,9 @@ public class CreateMap : MonoBehaviour {
 				}else if(c == '@'){
 					GameObject g = Instantiate(cube, new Vector3(i,0,j), Quaternion.identity);
 					g.GetComponent<Renderer>().materials[0].color = new Color(1,1,1,255);
-					g.name = i + " " + j +	 c;
+					g.name = i + " " + j + c;
 				}else{
-					i-=1;
-					j-=1;
+
 				}
 			}
 		}
