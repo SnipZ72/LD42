@@ -16,6 +16,9 @@ public class Move : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider col){
+		if(col.gameObject.name == "Finish" && tiles.Length <= 1){
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
 		if(col.gameObject.tag == "Walkable"){
 			for(int i=0; i < tiles.Length; i++){
 				if(tiles[i].transform.position == new Vector3(transform.position.x, 0, transform.position.z + 1))
@@ -30,14 +33,6 @@ public class Move : MonoBehaviour {
 		}
 	}
 
-
-	void OnTriggerEnter(Collider col){
-		print("ENTER");
-		if(col.gameObject.name == "Finish" && tiles.Length == 1){
-			print("HERE");
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		}
-	}
 
 	void GetInput()
 	{
