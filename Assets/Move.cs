@@ -11,8 +11,6 @@ public class Move : MonoBehaviour {
 	{
 		tiles = GameObject.FindGameObjectsWithTag("Walkable");
 		GetInput();
-		print(tiles.Length);
-
 	}
 
 	void OnTriggerStay(Collider col){
