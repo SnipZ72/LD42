@@ -7,7 +7,7 @@ public class CreateWall : MonoBehaviour {
 	private bool die = false;
 	void Update(){
 		if(die){
-			transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, -2,transform.position.z), 0.3f * Time.deltaTime);
+			transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, -2,transform.position.z), 0.5f * Time.deltaTime);
 			gameObject.tag = "NotWalkable";
 		}
 	}
