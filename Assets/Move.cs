@@ -7,6 +7,7 @@ public class Move : MonoBehaviour {
 
 	GameObject[] tiles;
 	bool right, left, down, up;
+	bool canUp = true, canRight = true, canDown = true, canLeft = true;
 	void Update () 
 	{
 		tiles = GameObject.FindGameObjectsWithTag("Walkable");
@@ -39,23 +40,43 @@ public class Move : MonoBehaviour {
 		for(int i=0; i < tiles.Length; i++){
 			if(Input.GetKeyDown(KeyCode.W))
 			{
-				if(up)
+				if(up && canUp){
+					canDown = false;
+					canLeft = true;
+					canRight = true;
+					canUp = true;
 					DoMove(0);
+				}
 				return;
 			}else if(Input.GetKeyDown(KeyCode.S))
 			{
-				if(down)
+				if(down && canDown){
+					canUp = false;
+					canLeft = true;
+					canRight = true;
+					canDown = true;
 					DoMove(1);
+				}
 				return;
 			}else if(Input.GetKeyDown(KeyCode.D))
 			{
-				if(left)
+				if(left && canLeft){
+					canRight = false;
+					canLeft = true;
+					canUp = true;
+					canDown = true;
 					DoMove(2);
+				}
 				return;
 			}else if(Input.GetKeyDown(KeyCode.A))
 			{
-				if(right)
+				if(right && canRight){
+					canLeft = false;
+					canRight = true;
+					canUp = true;
+					canDown = true;
 					DoMove(3);
+				}
 				return;
 			}
 		}
@@ -85,6 +106,7 @@ public class Move : MonoBehaviour {
 		left = false;
 		up = false;
 		down = false;
+
 		transform.position = pos;
 	}
 }
